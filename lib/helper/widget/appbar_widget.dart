@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
-  const AppBarWidget({super.key, required this.opacityValue});
+  const AppBarWidget({super.key, this.opacityValue = 1.0});
 
   final double opacityValue;
 
@@ -24,7 +24,7 @@ class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
         Padding(
           padding: EdgeInsets.symmetric(horizontal: 8.0),
           child: Text(
-            "#2",
+            "#3",
             style: TextStyle(color: Colors.white70, fontSize: 18),
           ),
         )
