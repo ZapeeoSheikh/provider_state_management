@@ -1,10 +1,11 @@
 # provider_state_management
 
 
-Added slider through which the color of scaffold, text, and appbar changes.
+Added list of items, through which user can add or remove items.
 
-## Lec 02 Outcome
+## Lec 03 Outcome
 
-https://github.com/ZapeeoSheikh/provider_state_management/assets/77886136/4df8dd99-673b-4280-b394-e3ac8f36d43e
+
+https://github.com/ZapeeoSheikh/provider_state_management/assets/77886136/1759a608-7606-42da-9b9f-6e3baf760c64
 
 
