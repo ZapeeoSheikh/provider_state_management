@@ -12,6 +12,7 @@ class CounterScreen extends StatefulWidget {
 }
 
 class _CounterScreenState extends State<CounterScreen> {
+
   @override
   void initState() {
     // TODO: implement initState
@@ -22,34 +23,54 @@ class _CounterScreenState extends State<CounterScreen> {
   }
 
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBarWidget(),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
-            const Text(
-              "Clock Time",
-              style: TextStyle(fontSize: 25, color: Colors.teal, fontWeight: FontWeight.bold),
-              textAlign: TextAlign.center,
-            ),
-            Consumer<ClockProvider>(builder: (context, value, child) {
-              return Text(
-                "${value.timeNow}\n${value.dateNow}",
-                style: const TextStyle(
-                  fontSize: 30,
-                ),
-                textAlign: TextAlign.center,
-              );
-            }),
-            const Text(
-              "in Pakistan",
-              style: TextStyle(fontSize: 18, color: Colors.black54),
-              textAlign: TextAlign.center,
-            ),
-          ],
+    return Consumer<ClockProvider>(builder: (context, value, child) {
+      return Scaffold(
+        backgroundColor: Colors.white.withOpacity(value.brightness),
+        appBar: AppBarWidget(
+          opacityValue: value.brightness,
         ),
-      ),
-    );
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              Text(
+                "Clock Time",
+                style: TextStyle(
+                    fontSize: 25,
+                    color: value.brightness > 0.5
+                        ? Colors.teal.withOpacity(value.brightness)
+                        : Colors.pinkAccent.withOpacity(1 - value.brightness),
+                    fontWeight: FontWeight.bold),
+                textAlign: TextAlign.center,
+              ),
+              Text(
+                "${value.timeNow}\n${value.dateNow}",
+                style: TextStyle(
+                    fontSize: 30,
+                    color: value.brightness > 0.5
+                        ? Colors.black87.withOpacity(value.brightness)
+                        : Colors.white.withOpacity(1 - value.brightness)),
+                textAlign: TextAlign.center,
+              ),
+              Text(
+                "in Pakistan",
+                style: TextStyle(
+                    fontSize: 18,
+                    color: value.brightness > 0.5
+                        ? Colors.black87.withOpacity(value.brightness)
+                        : Colors.white.withOpacity(1 - value.brightness)),
+                textAlign: TextAlign.center,
+              ),
+              Slider(
+                  activeColor: Colors.teal,
+                  value: value.brightness,
+                  onChanged: (val) {
+                    value.changeBrightness(val);
+                  }),
+            ],
+          ),
+        ),
+      );
+    });
   }
 }

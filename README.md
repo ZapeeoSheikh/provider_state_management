@@ -1,14 +1,10 @@
 # provider_state_management
 
-Lecture and Flutter project of Day 01 learning.
 
-## Final Outcome
+Added slider through which the color of scaffold, text, and appbar changes.
 
+## Lec 02 Outcome
 
-https://github.com/ZapeeoSheikh/provider_state_management/assets/77886136/30679bb6-5777-44c0-ad24-f25691de857b
-
-
-This project is a starting point for a Flutter application.
-
+https://github.com/ZapeeoSheikh/provider_state_management/assets/77886136/4df8dd99-673b-4280-b394-e3ac8f36d43e
 
 
