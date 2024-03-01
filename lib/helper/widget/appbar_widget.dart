@@ -15,6 +15,14 @@ class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
             color: Colors.white
         ),
       ),
+      actions: const [
+        Padding(
+          padding: EdgeInsets.symmetric(horizontal: 8.0),
+          child: Text("#1", style: TextStyle(
+            color: Colors.white70, fontSize: 18
+          ),),
+        )
+      ],
     );
   }
 }
