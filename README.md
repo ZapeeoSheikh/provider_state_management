@@ -1,16 +1,11 @@
 # provider_state_management
 
-A new Flutter project.
+Added slider through which the color of scaffold, text, and appbar changes.
 
-## Getting Started
+## Lec 02 Outcome
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+https://github.com/ZapeeoSheikh/provider_state_management/assets/77886136/4df8dd99-673b-4280-b394-e3ac8f36d43e
+
